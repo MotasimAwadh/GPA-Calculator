@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+<div class="container">
+    <div class="alert alert-info mt-3">
+        <button onclick="goToTranscript()" class="btn btn-primary">Go to grades
+            transcript</button>
+        <script>
+            function goToTranscript() {
+                window.open("https://sis.aou.edu.kw/spkwt/grades/transcript");
+            }
+        </script>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <h1>GPA Calculator</h1>
+</div>
+<!-- General Req. -->
+<div class="container my-4">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="thead-light">
+        <tr>
+            <td colspan="3">
+                <h3 class="text-center">General Requirement (Credits Needed = 18)</h3>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-center col-4">Course</th>
+            <th class="text-center col-4">Grade</th>
+            <th class="text-center col-4">Credits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>EL111</td>
+            <td>
+                <label for="EL111"></label>
+                <select id="EL111" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>EL112</td>
+            <td>
+                <label for="EL112"></label><select id="EL112" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>AR113</td>
+            <td>
+                <label for="AR113"></label><select id="AR113" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>GB102</td>
+            <td>
+                <label for="GB102"></label><select id="GB102" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>GR118</td>
+            <td>
+                <label for="GR118"></label><select id="GR118" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>GT101</td>
+            <td>
+                <label for="GT101"></label><select id="GT101" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<!-- University Req -->
+<div class="container my-4">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="thead-light">
+        <tr>
+            <td colspan="3">
+                <h3 class="text-center">University Requirements/Electives (Credits Needed = 3)</h3>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-center col-4">Course</th>
+            <th class="text-center col-4">Grade</th>
+            <th class="text-center col-4">Credits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>GR***</td>
+            <td>
+                <label for="GR121"></label><select id="GR121" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Spec. Req. -->
+<div class="container my-4">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="thead-light">
+        <tr>
+            <td colspan="3">
+                <h3 class="text-center">Spec. Requirements/Mandatory (Credits Needed = 96)</h3>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-center col-4">Course</th>
+            <th class="text-center col-4">Grade</th>
+            <th class="text-center col-4">Credits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>MT131</td>
+            <td>
+                <label for="MT131"></label><select id="MT131" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>MT132</td>
+            <td>
+                <label for="MT132"></label><select id="MT132" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>TM103</td>
+            <td>
+                <label for="TM103"></label><select id="TM103" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>TM105</td>
+            <td>
+                <label for="TM105"></label><select id="TM105" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>M251</td>
+            <td>
+                <label for="M251"></label><select id="M251" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>M269</td>
+            <td>
+                <label for="M269"></label><select id="M269" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>T215B</td>
+            <td>
+                <label for="T215B"></label><select id="T215B" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TM111 or M110</td>
+            <td>
+                <label for="TM111"></label><select id="TM111" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TM112</td>
+            <td>
+                <label for="TM112"></label><select id="TM112" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>T215A or TM255</td>
+            <td>
+                <label for="TM255"></label><select id="TM255" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TM351</td>
+            <td>
+                <label for="TM351"></label><select id="TM351" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TM354</td>
+            <td>
+                <label for="TM354"></label><select id="TM354" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TM355</td>
+            <td>
+                <label for="TM355"></label><select id="TM355" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>TM471</td>
+            <td>
+                <label for="TM471"></label><select id="TM471" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>8</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Faculty Req. / Man. -->
+<div class="container my-4">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="thead-light">
+        <tr>
+            <td colspan="3">
+                <h3 class="text-center">Faculty Requirements/ Mandatory (Credits Needed = 8)</h3>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-center col-4">Course</th>
+            <th class="text-center col-4">Grade</th>
+            <th class="text-center col-4">Credits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>MST129</td>
+            <td>
+                <label for="MST129"></label><select id="MST129" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>TM260</td>
+            <td>
+                <label for="TM260"></label><select id="TM260" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>4</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Faculty Req. / ELC. -->
+<div class="container my-4">
+    <table class="table table-bordered table-striped text-center">
+        <thead class="thead-light">
+        <tr>
+            <td colspan="3">
+                <h3 class="text-center">Faculty Requirements/ Electives (Credits Needed = 6)</h3>
+            </td>
+        </tr>
+        <tr>
+            <th class="text-center col-4">Course</th>
+            <th class="text-center col-4">Grade</th>
+            <th class="text-center col-4">Credits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>MT101</td>
+            <td>
+                <label for="MT101"></label><select id="MT101" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>MT390</td>
+            <td>
+                <label for="MT390"></label><select id="MT390" class="form-select grade-select">
+                    <option value="null">Not Taken</option>
+                    <option value="4">A</option>
+                    <option value="3.5">B+</option>
+                    <option value="3">B</option>
+                    <option value="2.5">C+</option>
+                    <option value="2">C</option>
+                    <option value="1.5">D</option>
+                    <option value="0">F</option>
+                </select>
+            </td>
+            <td>3</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- submit button -->
+<div class="container">
+    <button class="btn btn-primary" onclick="calculateGPA()">Calculate GPA</button>
+    <div class="alert alert-info mt-3" id="result">Your GPA: </div>
+</div>
+</body>
+
+<footer>
+    <div class="container">
+        <div class="text-end">
+            Made By Mo3tasim Awadh
+        </div>
+    </div>
+</footer>
+
+<script>
+    function calculateGPA() {
+        const courses = [
+            { id: 'EL111', credits: 3 }, { id: 'EL112', credits: 3 }, { id: 'AR113', credits: 3 },
+            { id: 'GB102', credits: 3 }, { id: 'GR118', credits: 3 }, { id: 'GT101', credits: 3 },
+            { id: 'GR121', credits: 3 }, { id: 'TM111', credits: 8 }, { id: 'TM112', credits: 8 },
+            { id: 'TM255', credits: 8 }, { id: 'T215B', credits: 8 }, { id: 'TM355', credits: 8 },
+            { id: 'TM351', credits: 8 }, { id: 'TM354', credits: 8 }, { id: 'TM471', credits: 8 },
+            { id: 'M251', credits: 8 }, { id: 'M269', credits: 8 }, { id: 'TM105', credits: 4 },
+            { id: 'TM103', credits: 4 }, { id: 'MT131', credits: 4 }, { id: 'MT132', credits: 4 },
+            { id: 'MST129', credits: 4 }, { id: 'TM260', credits: 4 }, { id: 'MT390', credits: 3 },
+            { id: 'MT101', credits: 3 }
+        ];
+
+        let totalPoints = 0.0;
+        let totalCredits = 0;
+
+        courses.forEach(course => {
+            const grade = document.getElementById(course.id).value;
+            if (grade !== 'null') {
+                totalPoints += parseFloat(grade) * course.credits;
+                totalCredits += course.credits;
+            }
+        });
+
+        const resultDiv = document.getElementById('result');
+
+        if (totalCredits > 0) {
+            let gpa = (totalPoints / totalCredits);
+            let res = Math.round(gpa * 100.0) / 100.0;
+
+            if (res === 0.0) res = '0.0'
+
+            resultDiv.innerText = `Your GPA: ${res}`;
+
+            if (res < 2.0) {
+                resultDiv.style.color = '#FF0000'; // red
+            } else if (res >= 3.73) {
+                resultDiv.style.color = '#1B9E00'; // green
+            } else {
+                resultDiv.style.color = ''; // black
+            }
+
+
+        } else {
+            resultDiv.style.color = '#FF9000'; // yellow
+            resultDiv.innerText = `Your GPA: N/A (No grades available)`;
+        }
+    }
+</script>
+
+</html>
