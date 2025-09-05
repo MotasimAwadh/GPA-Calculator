@@ -77,6 +77,7 @@ function toggleDarkMode() {
     }
 }
 
+/*
 // Load theme on page load
 document.body.classList.add("dark-mode");
 window.onload = function () {
@@ -89,3 +90,5 @@ window.onload = function () {
         btn.textContent = "☀️ Light Mode";
     }
 };
+
+ */
