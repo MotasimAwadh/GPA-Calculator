@@ -78,6 +78,7 @@ function toggleDarkMode() {
 }
 
 // Load theme on page load
+document.body.classList.add("dark-mode");
 window.onload = function () {
     const theme = localStorage.getItem("theme");
     const body = document.body;
