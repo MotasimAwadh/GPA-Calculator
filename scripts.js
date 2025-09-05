@@ -11,7 +11,6 @@ function calculateGPA() {
         { id: 'MT101', credits: 3 }
     ];
 
-    let selects = document.querySelectorAll(".grade-select");
     let totalPoints = 0.0;
     let totalCredits = 0;
 
