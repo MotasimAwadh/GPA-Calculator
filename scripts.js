@@ -61,3 +61,30 @@ function scrollToSection(sectionId) {
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+
+    // Update button text
+    const btn = document.getElementById("darkModeBtn");
+    if (body.classList.contains("dark-mode")) {
+        btn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+    } else {
+        btn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+// Load theme on page load
+window.onload = function () {
+    const theme = localStorage.getItem("theme");
+    const body = document.body;
+    const btn = document.getElementById("darkModeBtn");
+
+    if (theme === "dark") {
+        body.classList.add("dark-mode");
+        btn.textContent = "☀️ Light Mode";
+    }
+};
